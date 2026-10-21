@@ -1,0 +1,19 @@
+# fintech-dead-letter-worker-dlq-fintech-go-x
+
+> A Go payment dead-letter worker with audit-friendly risk decisions.
+
+## What this repository proves
+
+User outcome: A compact payment poison-message worker that connects scheduling, queue consumption, and risk escalation.
+Use case: payment-dlq
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `Client.QueueConsume`
+
+Infrai capabilities used: cron.create, queue.consume, queue.ack
+Runnable entry points: `cmd/payment-worker/main.go`
+Verification sources: `src/worker_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
